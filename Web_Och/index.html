@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Fit Guide – tvůj deník do fitka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="mobil.css">
+    
+    <link rel="icon" type="image/png" href="/media/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/media/favicon.svg" />
+<link rel="shortcut icon" href="/media/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+<link rel="manifest" href="/media/site.webmanifest" />
+</head>
+<body>
+
+<nav>
+    <a href="#o-aplikaci">o aplikaci</a>
+    <a href="#trenink">můj trénink</a>
+    <a href="#cviky">cviky</a>
+    <a href="#kontakt">kontakt</a>
+</nav>
+
+<header id="uvod">
+    <h1>FIT GUIDE</h1>
+    <h2>tvůj osobní deník pro každý trénink</h2>
+</header>
+
+<section id="o-aplikaci">
+    <p><strong>Fit Guide</strong><br>
+    je tvoje nová pravá ruka do posilovny. Zapomeň na papír a tužku! Zapisuj si zvednuté váhy, objevuj nové cviky přes naši online databázi a sleduj svůj progres. A co je nejlepší? Tvoje data se ukládají přímo do zařízení, takže apka funguje i v šatně bez signálu!</p>
+    <img src="media/cinka.png" alt="činka">
+</section>
+
+<section id="trenink">
+    <h2>staty</h2>
+    
+    <form id="workoutForm" style="margin-bottom: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+        <input type="text" id="cvikName" placeholder="Název (např. Dřepy)" required style="padding: 10px; font-size: 18px; background: #1E1E1E; color: #E0E0E0; border: 1px solid #FF5722;">
+        <input type="text" id="cvikVaha" placeholder="Výkon (např. 3x10 - 80kg)" required style="padding: 10px; font-size: 18px; background: #1E1E1E; color: #E0E0E0; border: 1px solid #FF5722;">
+        <button type="submit" id="submitBtn" style="padding: 10px 20px; font-size: 18px; background: #FF5722; color: #121212; border: none; font-weight: bold; cursor: pointer;">ZAPSAT</button>
+    </form>
+
+    <div id="workoutList"></div>
+</section>
+
+<section id="cviky">
+    <h2>DATABÁZE CVIKŮ</h2>
+    
+    <div id="filter-box" style="margin-bottom: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+        
+        <select id="muscleSelect" style="padding: 10px; font-size: 18px; background: #1E1E1E; color: #E0E0E0; border: 1px solid #FF5722;">
+            <option value="">-- Jaký sval cvičíš? --</option>
+            <option value="abdominals">Břicho (Abdominals)</option>
+            <option value="abductors">Odtahovače (Abductors)</option>
+            <option value="adductors">Přitahovače (Adductors)</option>
+            <option value="biceps">Biceps</option>
+            <option value="calves">Lýtka (Calves)</option>
+            <option value="chest">Hrudník (Chest)</option>
+            <option value="forearms">Předloktí (Forearms)</option>
+            <option value="glutes">Hýždě (Glutes)</option>
+            <option value="hamstrings">Zadní stehna (Hamstrings)</option>
+            <option value="lats">Široký sval zádový (Lats)</option>
+            <option value="lower_back">Spodní záda (Lower Back)</option>
+            <option value="middle_back">Střední záda (Middle Back)</option>
+            <option value="neck">Krk (Neck)</option>
+            <option value="quadriceps">Přední stehna (Quadriceps)</option>
+            <option value="traps">Trapézy (Traps)</option>
+            <option value="triceps">Triceps</option>
+        </select>
+
+        <select id="difficultySelect" style="padding: 10px; font-size: 18px; background: #1E1E1E; color: #E0E0E0; border: 1px solid #FF5722;">
+            <option value="">-- Vyber obtížnost --</option>
+            <option value="beginner">Začátečník (Beginner)</option>
+            <option value="intermediate">Pokročilý (Intermediate)</option>
+            <option value="expert">Expert</option>
+        </select>
+
+        <button id="searchBtn" style="padding: 10px 20px; font-size: 18px; background: #FF5722; color: #121212; border: none; font-weight: bold; cursor: pointer;">NAJÍT CVIKY</button>
+    </div>
+
+    <div id="apiCvikyList">
+        <p>Vyber si svalovou partii a obtížnost a klikni na Hledat!</p>
+    </div>
+</section>
+
+<section id="komunita">
+    <p><strong>Proč používat Fit Guide?</strong></p>
+    <p>Offline režim: všechna data se ukládají přímo do tvého mobilu.</p>
+    <p>Chytrá API: získej tipy na nové cviky z obří světové databáze.</p>
+    <p>Vlastní cíle: překonávej své osobní rekordy každý týden.</p>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt & Podpora</h2>
+    <p>Máš nápad na zlepšení aplikace? Napiš mi!</p>
+    <p>E-mail: podpora@fitguide.cz</p>
+    <p>Instagram: @fitguide_cz</p>
+</section>
+
+<div class="spodni-pruh"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

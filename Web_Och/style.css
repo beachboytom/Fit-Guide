@@ -1,0 +1,139 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212; 
+    color: #E0E0E0;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* NAVIGACE */
+nav {
+    background-color: #FF5722; 
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #FFFFFF;
+    margin: 0 25px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #121212; 
+    transform: translateY(-3px) scale(1.05); 
+}
+
+/* HLAVIČKA - OPRAVENÝ NÁZEV NA photo1.jpeg */
+header {
+    width: 100%;
+    height: 70vh; 
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('media/photo1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#uvod h1 {
+    color: white;
+    font-size: 110px;
+    margin: 0 0 15px 0;
+    font-weight: 700; 
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+#uvod h2 {
+    color: #FF5722;
+    font-size: 38px;
+    margin: 0;
+    font-weight: 400; 
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+section {
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto; 
+    font-size: 22px;
+}
+
+#o-aplikaci {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    background: #1E1E1E;
+    padding: 60px;
+    border-radius: 30px;
+    gap: 50px;
+}
+
+#o-aplikaci p { width: 60%; margin: 0; }
+#o-aplikaci strong { color: #FF5722; font-size: 34px; display: block; margin-bottom: 20px; }
+#o-aplikaci img { width: 35%; max-width: 300px; margin: 0; border-radius: 15px; }
+
+#trenink {
+    background: #FF5722;
+    color: #FFFFFF;
+    padding: 80px 60px;
+    border-radius: 40px;
+}
+
+#trenink h2 { font-size: 58px; margin: 0 0 50px 0; text-transform: uppercase; }
+#trenink h3 { font-size: 32px; font-weight: bold; text-align: left; margin: 40px 0 10px 0; }
+#trenink p {
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+    background: rgba(0,0,0,0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#cviky { color: #E0E0E0; padding: 80px 50px; border-radius: 30px; position: relative; }
+#cviky h2 { font-size: 52px; color: #FF5722; text-transform: uppercase; margin: 0 0 60px 0; }
+#cviky h3 { margin-top: 60px; font-size: 30px; font-weight: bold; }
+#cviky p { font-size: 22px; margin-top: 15px; }
+
+#ikona-sila, #ikona-kardio { display: block; width: 120px; margin: 40px auto 20px auto; }
+
+#komunita {
+    background: #1E1E1E; 
+    padding: 60px 80px;
+    border-radius: 40px;
+    width: 70%;
+    margin: 120px auto 80px auto;
+    text-align: left;
+}
+#komunita strong { display: block; font-size: 36px; margin-bottom: 30px; color: #FF5722; }
+
+#kontakt { margin-top: 80px; margin-bottom: 120px; }
+#kontakt h2 { font-size: 48px; color: #FF5722; margin-bottom: 20px; text-transform: uppercase; }
+
+.spodni-pruh { width: 100%; height: 100px; background: #FF5722; }

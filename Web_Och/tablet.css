@@ -1,0 +1,79 @@
+@media (min-width: 601px) and (max-width: 1024px) {
+    nav {
+        padding: 12px 0;
+    }
+    nav a {
+        font-size: 20px;
+        margin: 0 14px;
+    }
+    #uvod h1 {
+        font-size: 68px;
+        bottom: 66%;
+    }
+    #uvod h2 {
+        font-size: 26px;
+        bottom: 60%;
+    }
+    .vlny {
+        position: relative;
+        width: 100%;
+        margin-top: -90px;
+    }
+    section {
+        width: 88%;
+        font-size: 20px;
+        margin: 40px auto 60px;
+    }
+    #o-aplikaci {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0 40px 50px 40px;
+        margin-top: 50px;
+    }
+    #o-aplikaci p, #trenink p, #cviky p, #kontakt p {
+        font-size: 20px;
+        width: 100%;
+    }
+    #o-aplikaci img {
+        width: 280px;
+        margin-top: 30px;
+    }
+    #trenink {
+        border-radius: 40px 40px 0 0;
+        padding: 50px 40px;
+    }
+    #trenink h2, #cviky h2, #kontakt h2 {
+        font-size: 40px;
+    }
+    #trenink h3, #cviky h3 {
+        font-size: 26px;
+        margin-top: 40px;
+    }
+    #ikona-sila, #ikona-kardio {
+        position: static;
+        display: block;
+        width: 190px;
+        margin: 30px auto;
+    }
+    #galerie img {
+        width: 50%;
+        margin: 15px;
+    }
+    #galerie h2 {
+        font-size: 34px;
+        padding: 12px;
+    }
+    #komunita {
+        width: 85%;
+        padding: 50px 40px;
+        font-size: 20px;
+        margin: 90px auto 70px;
+    }
+    #komunita strong {
+        font-size: 26px;
+    }
+    .spodni-pruh {
+        height: 70px;
+    }
+}
