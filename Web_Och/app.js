@@ -16,14 +16,12 @@ window.addEventListener('load', loadWorkouts);
 workoutForm.addEventListener('submit', function(e) {
     e.preventDefault(); 
     
-    // Pojistka proti uložení prázdného textu
     if (inputName.value.trim() === "" || inputVaha.value.trim() === "") {
         return;
     }
 
     let workouts = JSON.parse(localStorage.getItem('fitGuideData')) || [];
     
-    // Vytvoření nového cviku s unikátním ID
     let newWorkout = {
         id: Date.now(), 
         name: inputName.value,
@@ -48,20 +46,6 @@ function loadWorkouts() {
         return;
     }
 
-    // Záchrana pro stará data bez ID
-    let updated = false;
-    workouts.forEach((w, index) => {
-        if (!w.id) {
-            w.id = Date.now() + index; 
-            updated = true;
-        }
-    });
-
-    if (updated) {
-        localStorage.setItem('fitGuideData', JSON.stringify(workouts));
-    }
-
-    // Vykreslení kartiček
     for(let w of workouts) {
         let div = document.createElement('div');
         div.style.background = '#1E1E1E';
@@ -84,7 +68,6 @@ function loadWorkouts() {
         workoutList.appendChild(div);
     }
 
-    // Aktivace tlačítek pro mazání
     let deleteButtons = document.querySelectorAll('.delete-btn');
     deleteButtons.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -103,7 +86,6 @@ function smazCvik(id) {
 
 
 
-// databaze cviku
 searchBtn.addEventListener('click', async function() {
     if (muscleSelect.value === "" && difficultySelect.value === "") {
         apiCvikyList.innerHTML = "<p style='color: red;'>Vyber si aspoň jednu kategorii!</p>";
@@ -111,7 +93,7 @@ searchBtn.addEventListener('click', async function() {
     }
 
     apiCvikyList.innerHTML = "<p>Hledám cviky...</p>";
-//// uplne  nechapu jak funguje ze to prida do ul muscle value ze pak by to vypadalo https://api.api-ninjas.com/v1/exercisesmuscle=nejakysval a to mi prijde spatne nebo m to vysvetli'
+
     let url = 'https://api.api-ninjas.com/v1/exercises?';
     if (muscleSelect.value !== "") {
         url += `muscle=${muscleSelect.value}&`;
@@ -120,7 +102,7 @@ searchBtn.addEventListener('click', async function() {
         url += `difficulty=${difficultySelect.value}`;
     }
 
-    try {//// co dela await nebo celkove to headers nechapu 
+    try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -155,3 +137,5 @@ searchBtn.addEventListener('click', async function() {
         apiCvikyList.innerHTML = "<p style='color: red;'>Nepodařilo se spojit se serverem. Zkontroluj svůj API klíč!</p>";
     }
 });
+
+
